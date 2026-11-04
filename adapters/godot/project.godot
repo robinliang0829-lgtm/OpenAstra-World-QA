@@ -1,0 +1,12 @@
+; Isolated, synthetic QA demonstration. No autoload or gameplay script.
+config_version=5
+
+[application]
+config/name="World QA Export Demo"
+run/main_scene="res://demo.tscn"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+
+[physics]
+common/physics_ticks_per_second=60

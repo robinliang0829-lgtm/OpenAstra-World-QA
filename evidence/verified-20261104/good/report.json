@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "checked": 1,
+      "findings": [],
+      "id": "grounding",
+      "status": "pass"
+    },
+    {
+      "checked": 1,
+      "findings": [],
+      "id": "track_joints",
+      "status": "pass"
+    },
+    {
+      "checked": 2,
+      "findings": [],
+      "id": "spacing",
+      "status": "pass"
+    },
+    {
+      "checked": 4,
+      "findings": [],
+      "id": "train_consistency",
+      "status": "pass"
+    },
+    {
+      "checked": 1,
+      "findings": [],
+      "id": "route_trace",
+      "scope": "Ordered sampled waypoint coverage only; not collision, clearance, or gameplay verification.",
+      "status": "pass"
+    }
+  ],
+  "config": {
+    "max_body_ratio_error": 0.15,
+    "max_embed_m": 0.15,
+    "max_float_m": 0.15,
+    "max_forward_angle_deg": 15.0,
+    "max_track_gap_m": 0.03,
+    "min_column_spacing_m": 2.0,
+    "min_lamp_spacing_m": 4.0,
+    "route_tolerance_m": 0.75
+  },
+  "evidence_kind": "synthetic",
+  "limitations": [
+    "PASS applies only to declared checks and supplied evidence; it is not release approval.",
+    "Synthetic fixtures do not establish real-island quality.",
+    "Engine-exported geometry does not establish camera, GPU or gameplay acceptance.",
+    "Route traces establish ordered sample coverage only, not collision clearance or physical traversability.",
+    "Default thresholds are demonstration values pending island-owner calibration."
+  ],
+  "numeric_comparison": {
+    "absolute_tolerance": 1e-09,
+    "relative_tolerance": 0.0,
+    "units": "Each measurement's declared unit; no coordinate-scale allowance."
+  },
+  "provenance": {
+    "config_input_sha256": null,
+    "effective_config_sha256": "a9c38639c8fd420e698c5a2bbbc70ba4f71d0a69f30cbbe563ec25907995563f",
+    "manifest_sha256": "c26f589520801377f6cbf4710034186556721e723866ec726330d7b85e2a86cc",
+    "tool": "OpenAstra-World-QA",
+    "tool_version": "0.1.0"
+  },
+  "scene_id": "synthetic-terrace-train-good",
+  "schema_version": "worldqa.report.v1",
+  "source": {
+    "engine": "synthetic-fixture",
+    "engine_version": "1",
+    "revision": "fixture-v1"
+  },
+  "summary": {
+    "check_counts": {
+      "blocked": 0,
+      "fail": 0,
+      "not_applicable": 0,
+      "pass": 5
+    },
+    "checked": 9,
+    "error_count": 0,
+    "status": "pass",
+    "warning_count": 0
+  }
+}

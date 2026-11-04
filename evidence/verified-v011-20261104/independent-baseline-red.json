@@ -1,0 +1,6 @@
+{
+  "baseline_sha": "dd33c794f03a936dea31e5793dcf96b783cc2648",
+  "suite": "tests/test_workshop_review.py",
+  "exit_code": 1,
+  "method": "Independent tests replayed against isolated original source; not a claim that review tests preceded implementation"
+}

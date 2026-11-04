@@ -1,0 +1,107 @@
+[gd_scene load_steps=3 format=3]
+
+[sub_resource type="BoxShape3D" id="ground_shape"]
+size = Vector3(60, 1, 60)
+
+[sub_resource type="BoxMesh" id="building_mesh"]
+size = Vector3(2, 2, 2)
+
+[node name="SyntheticIsland" type="Node3D"]
+metadata/qainfo = {
+"scene_id": "godot-synthetic-demo",
+"synthetic": true,
+"meters_per_unit": 1.0,
+"revision": "demo-v1",
+"track_links": [{"id": "joint-01", "from": {"object_id": "track-01", "endpoint": "b"}, "to": {"object_id": "track-02", "endpoint": "a"}}],
+"routes": [{"id": "demo-walk", "waypoint_markers": ["RouteStart", "RouteEnd"]}]
+}
+
+[node name="Ground" type="StaticBody3D" parent="."]
+position = Vector3(0, -0.5, 0)
+collision_layer = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("ground_shape")
+
+[node name="FloatingStation" type="Node3D" parent="."]
+position = Vector3(0, 2, 0)
+metadata/qainfo = {"id": "station-floats", "role": "building", "base_marker": "Base", "support_probe": "Base", "support_collision_mask": 1}
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FloatingStation"]
+position = Vector3(0, 1, 0)
+mesh = SubResource("building_mesh")
+
+[node name="Base" type="Marker3D" parent="FloatingStation"]
+
+[node name="Track01" type="Node3D" parent="."]
+position = Vector3(5, 0, 0)
+metadata/qainfo = {"id": "track-01", "role": "track", "endpoint_a": "A", "endpoint_b": "B"}
+
+[node name="A" type="Marker3D" parent="Track01"]
+
+[node name="B" type="Marker3D" parent="Track01"]
+position = Vector3(0, 0, 5)
+
+[node name="Track02" type="Node3D" parent="."]
+position = Vector3(5, 0, 5.3)
+metadata/qainfo = {"id": "track-02", "role": "track", "endpoint_a": "A", "endpoint_b": "B"}
+
+[node name="A" type="Marker3D" parent="Track02"]
+
+[node name="B" type="Marker3D" parent="Track02"]
+position = Vector3(0, 0, 5)
+
+[node name="Lamp01" type="Node3D" parent="."]
+position = Vector3(7, 0, 0)
+metadata/qainfo = {"id": "lamp-01", "role": "lamp", "spacing_group": "east-path"}
+
+[node name="Lamp02" type="Node3D" parent="."]
+position = Vector3(7, 0, 1)
+metadata/qainfo = {"id": "lamp-02", "role": "lamp", "spacing_group": "east-path"}
+
+[node name="TrackDirectionStart" type="Marker3D" parent="."]
+
+[node name="TrackDirectionEnd" type="Marker3D" parent="."]
+position = Vector3(0, 0, 1)
+
+[node name="TrainHead" type="Node3D" parent="."]
+position = Vector3(5, 0, 2)
+metadata/qainfo = {"id": "train-head", "role": "train_head", "consist_id": "demo-train", "forward_origin": "Bottom", "forward_tip": "Nose", "expected_forward_origin": "../TrackDirectionStart", "expected_forward_tip": "../TrackDirectionEnd", "body_left": "Left", "body_right": "Right", "body_bottom": "Bottom", "body_top": "Top"}
+
+[node name="Bottom" type="Marker3D" parent="TrainHead"]
+
+[node name="Top" type="Marker3D" parent="TrainHead"]
+position = Vector3(0, 2, 0)
+
+[node name="Left" type="Marker3D" parent="TrainHead"]
+position = Vector3(-1, 0, 0)
+
+[node name="Right" type="Marker3D" parent="TrainHead"]
+position = Vector3(1, 0, 0)
+
+[node name="Nose" type="Marker3D" parent="TrainHead"]
+position = Vector3(0, 0, -1)
+
+[node name="TrainCar" type="Node3D" parent="."]
+position = Vector3(5, 0, 7)
+metadata/qainfo = {"id": "train-car", "role": "train_car", "consist_id": "demo-train", "forward_origin": "Bottom", "forward_tip": "Nose", "expected_forward_origin": "../TrackDirectionStart", "expected_forward_tip": "../TrackDirectionEnd", "body_left": "Left", "body_right": "Right", "body_bottom": "Bottom", "body_top": "Top"}
+
+[node name="Bottom" type="Marker3D" parent="TrainCar"]
+
+[node name="Top" type="Marker3D" parent="TrainCar"]
+position = Vector3(0, 1, 0)
+
+[node name="Left" type="Marker3D" parent="TrainCar"]
+position = Vector3(-0.5, 0, 0)
+
+[node name="Right" type="Marker3D" parent="TrainCar"]
+position = Vector3(0.5, 0, 0)
+
+[node name="Nose" type="Marker3D" parent="TrainCar"]
+position = Vector3(0, 0, 1)
+
+[node name="RouteStart" type="Marker3D" parent="."]
+position = Vector3(0, 0, 10)
+
+[node name="RouteEnd" type="Marker3D" parent="."]
+position = Vector3(10, 0, 10)

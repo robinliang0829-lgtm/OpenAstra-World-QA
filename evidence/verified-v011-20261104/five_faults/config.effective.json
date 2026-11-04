@@ -1,0 +1,10 @@
+{
+  "max_body_ratio_error": 0.15,
+  "max_embed_m": 0.15,
+  "max_float_m": 0.15,
+  "max_forward_angle_deg": 15.0,
+  "max_track_gap_m": 0.03,
+  "min_column_spacing_m": 2.0,
+  "min_lamp_spacing_m": 4.0,
+  "route_tolerance_m": 0.75
+}

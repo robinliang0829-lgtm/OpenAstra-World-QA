@@ -1,0 +1,20 @@
+{
+  "good": {
+    "exit_code": 0,
+    "expected": 0,
+    "stdout": "PASS | scene=synthetic-terrace-train-good | evidence=synthetic | report=/workspace/scratch/3fc363c64891/OpenAstra-World-QA/evidence/verified-20261104/good/report.html\n",
+    "stderr": ""
+  },
+  "five_faults": {
+    "exit_code": 1,
+    "expected": 1,
+    "stdout": "FAIL | scene=synthetic-terrace-train-five-faults | evidence=synthetic | report=/workspace/scratch/3fc363c64891/OpenAstra-World-QA/evidence/verified-20261104/five_faults/report.html\n",
+    "stderr": ""
+  },
+  "missing_evidence": {
+    "exit_code": 3,
+    "expected": 3,
+    "stdout": "BLOCKED | scene=synthetic-terrace-train-missing-evidence | evidence=synthetic | report=/workspace/scratch/3fc363c64891/OpenAstra-World-QA/evidence/verified-20261104/missing_evidence/report.html\n",
+    "stderr": ""
+  }
+}

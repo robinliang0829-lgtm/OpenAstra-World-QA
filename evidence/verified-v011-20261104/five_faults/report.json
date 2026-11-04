@@ -1,0 +1,209 @@
+{
+  "checks": [
+    {
+      "checked": 1,
+      "findings": [
+        {
+          "code": "BUILDING_FLOATING",
+          "limit": 0.15,
+          "measured": 1.0,
+          "message": "Building base is above its declared measured support.",
+          "object_ids": [
+            "/Synthetic/WelcomeStation"
+          ],
+          "position": [
+            0,
+            13,
+            0
+          ],
+          "severity": "error"
+        }
+      ],
+      "id": "grounding",
+      "status": "fail"
+    },
+    {
+      "checked": 1,
+      "findings": [
+        {
+          "code": "TRACK_GAP",
+          "limit": 0.03,
+          "link_id": "track-a-to-b",
+          "measured": 1.0,
+          "message": "Declared track connection track-a-to-b exceeds the gap limit.",
+          "object_ids": [
+            "/Synthetic/TrackA",
+            "/Synthetic/TrackB"
+          ],
+          "position": [
+            10,
+            12,
+            10
+          ],
+          "severity": "error"
+        }
+      ],
+      "id": "track_joints",
+      "status": "fail"
+    },
+    {
+      "checked": 2,
+      "findings": [
+        {
+          "code": "OBJECTS_TOO_CLOSE",
+          "limit": 4.0,
+          "measured": 1.0,
+          "message": "lamp objects in spacing group 'outer-walk' are too close.",
+          "object_ids": [
+            "/Synthetic/LampA",
+            "/Synthetic/LampB"
+          ],
+          "position": [
+            0,
+            12,
+            20
+          ],
+          "severity": "error"
+        }
+      ],
+      "id": "spacing",
+      "status": "fail"
+    },
+    {
+      "checked": 4,
+      "findings": [
+        {
+          "code": "TRAIN_WRONG_DIRECTION",
+          "limit": 15.0,
+          "measured": 180.0,
+          "message": "Vehicle forward direction differs from the declared travel direction.",
+          "object_ids": [
+            "/Synthetic/Train/Head"
+          ],
+          "position": [
+            2,
+            12,
+            10
+          ],
+          "severity": "error"
+        },
+        {
+          "code": "TRAIN_BODY_RATIO",
+          "dimension": "body_width",
+          "limit": 0.15,
+          "measured": 0.5,
+          "message": "Car body_width differs from the reference head body.",
+          "object_ids": [
+            "/Synthetic/Train/Head",
+            "/Synthetic/Train/CarA"
+          ],
+          "position": [
+            -5,
+            12,
+            10
+          ],
+          "severity": "error"
+        },
+        {
+          "code": "TRAIN_BODY_RATIO",
+          "dimension": "body_height",
+          "limit": 0.15,
+          "measured": 0.4999999999999998,
+          "message": "Car body_height differs from the reference head body.",
+          "object_ids": [
+            "/Synthetic/Train/Head",
+            "/Synthetic/Train/CarA"
+          ],
+          "position": [
+            -5,
+            12,
+            10
+          ],
+          "severity": "error"
+        }
+      ],
+      "id": "train_consistency",
+      "status": "fail"
+    },
+    {
+      "checked": 1,
+      "findings": [
+        {
+          "code": "ROUTE_INCOMPLETE",
+          "message": "The recorded route explicitly reports incomplete execution.",
+          "object_ids": [
+            "synthetic-welcome-walk"
+          ],
+          "severity": "error"
+        },
+        {
+          "code": "ROUTE_WAYPOINT_MISSED",
+          "limit": 0.75,
+          "message": "Waypoint 2 is not reached by successive trace samples in the declared order.",
+          "object_ids": [
+            "synthetic-welcome-walk"
+          ],
+          "position": [
+            8,
+            12,
+            0
+          ],
+          "severity": "error",
+          "waypoint_index": 2
+        }
+      ],
+      "id": "route_trace",
+      "scope": "Ordered sampled waypoint coverage only; not collision, clearance, or gameplay verification.",
+      "status": "fail"
+    }
+  ],
+  "config": {
+    "max_body_ratio_error": 0.15,
+    "max_embed_m": 0.15,
+    "max_float_m": 0.15,
+    "max_forward_angle_deg": 15.0,
+    "max_track_gap_m": 0.03,
+    "min_column_spacing_m": 2.0,
+    "min_lamp_spacing_m": 4.0,
+    "route_tolerance_m": 0.75
+  },
+  "evidence_kind": "synthetic",
+  "limitations": [
+    "PASS applies only to declared checks and supplied evidence; it is not release approval.",
+    "Synthetic fixtures do not establish real-island quality.",
+    "Engine-exported geometry does not establish camera, GPU or gameplay acceptance.",
+    "Route traces establish ordered sample coverage only, not collision clearance or physical traversability.",
+    "Default thresholds are demonstration values pending island-owner calibration."
+  ],
+  "numeric_comparison": {
+    "absolute_tolerance": 1e-09,
+    "relative_tolerance": 0.0,
+    "units": "Each measurement's declared unit; no coordinate-scale allowance."
+  },
+  "provenance": {
+    "config_input_sha256": null,
+    "effective_config_sha256": "a9c38639c8fd420e698c5a2bbbc70ba4f71d0a69f30cbbe563ec25907995563f",
+    "manifest_sha256": "76f06167c785bd0652bafce854299e2613646aa7abb1cd797f75991a94e8a6da",
+    "tool": "OpenAstra-World-QA",
+    "tool_version": "0.1.1"
+  },
+  "scene_id": "synthetic-terrace-train-five-faults",
+  "schema_version": "worldqa.report.v1",
+  "source": {
+    "engine": "synthetic-fixture",
+    "engine_version": "1",
+    "revision": "fixture-v1"
+  },
+  "summary": {
+    "check_counts": {
+      "blocked": 0,
+      "fail": 5,
+      "not_applicable": 0,
+      "pass": 0
+    },
+    "checked": 9,
+    "error_count": 8,
+    "status": "fail",
+    "warning_count": 0
+  }
+}

@@ -1,0 +1,222 @@
+test_cli_retains_missing_export_in_all_three_report_formats (test_workshop_review.WorkshopIndependentReview.test_cli_retains_missing_export_in_all_three_report_formats) ... FAIL
+test_definite_geometry_failure_does_not_get_downgraded_by_missing_export (test_workshop_review.WorkshopIndependentReview.test_definite_geometry_failure_does_not_get_downgraded_by_missing_export) ... FAIL
+test_enormous_integer_difference_returns_cli_invalid_not_traceback (test_workshop_review.WorkshopIndependentReview.test_enormous_integer_difference_returns_cli_invalid_not_traceback) ... 
+  test_enormous_integer_difference_returns_cli_invalid_not_traceback (test_workshop_review.WorkshopIndependentReview.test_enormous_integer_difference_returns_cli_invalid_not_traceback) (sign=1) ... FAIL
+  test_enormous_integer_difference_returns_cli_invalid_not_traceback (test_workshop_review.WorkshopIndependentReview.test_enormous_integer_difference_returns_cli_invalid_not_traceback) (sign=-1) ... FAIL
+test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) ... 
+  test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value=None) ... FAIL
+  test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value=False) ... FAIL
+  test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value=0) ... FAIL
+  test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value='') ... FAIL
+  test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value='warning') ... FAIL
+  test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value={}) ... FAIL
+  test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value=[None]) ... FAIL
+  test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value=[0]) ... FAIL
+  test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value=[' ']) ... FAIL
+  test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value=[[]]) ... FAIL
+test_export_diagnostic_survives_when_every_object_was_skipped (test_workshop_review.WorkshopIndependentReview.test_export_diagnostic_survives_when_every_object_was_skipped) ... FAIL
+test_export_diagnostics_are_inert_text_in_human_reports (test_workshop_review.WorkshopIndependentReview.test_export_diagnostics_are_inert_text_in_human_reports) ... FAIL
+test_legacy_absence_and_explicit_empty_warning_list_remain_valid (test_workshop_review.WorkshopIndependentReview.test_legacy_absence_and_explicit_empty_warning_list_remain_valid) ... ok
+test_output_diagnostics_are_detached_from_caller_owned_input (test_workshop_review.WorkshopIndependentReview.test_output_diagnostics_are_detached_from_caller_owned_input) ... FAIL
+test_representable_large_integer_with_zero_difference_is_still_accepted (test_workshop_review.WorkshopIndependentReview.test_representable_large_integer_with_zero_difference_is_still_accepted) ... ok
+test_skipped_exported_object_cannot_disappear_behind_good_station (test_workshop_review.WorkshopIndependentReview.test_skipped_exported_object_cannot_disappear_behind_good_station) ... FAIL
+
+======================================================================
+FAIL: test_cli_retains_missing_export_in_all_three_report_formats (test_workshop_review.WorkshopIndependentReview.test_cli_retains_missing_export_in_all_three_report_formats)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 88, in test_cli_retains_missing_export_in_all_three_report_formats
+    self.assertEqual(run.returncode, 3, run.stderr)
+AssertionError: 0 != 3 : 
+
+======================================================================
+FAIL: test_definite_geometry_failure_does_not_get_downgraded_by_missing_export (test_workshop_review.WorkshopIndependentReview.test_definite_geometry_failure_does_not_get_downgraded_by_missing_export)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 63, in test_definite_geometry_failure_does_not_get_downgraded_by_missing_export
+    self.assertEqual(report["summary"]["warning_count"], 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_enormous_integer_difference_returns_cli_invalid_not_traceback (test_workshop_review.WorkshopIndependentReview.test_enormous_integer_difference_returns_cli_invalid_not_traceback) (sign=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 104, in test_enormous_integer_difference_returns_cli_invalid_not_traceback
+    self.assertEqual(run.returncode, 2, run.stderr)
+AssertionError: 1 != 2 : Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/worldqa/__main__.py", line 3, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/worldqa/cli.py", line 92, in main
+    report = inspect_scene(scene, config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/worldqa/engine.py", line 442, in inspect_scene
+    _grounding(objects, config),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/worldqa/engine.py", line 262, in _grounding
+    gap = _finite_result(obj["base_y"] - obj["support_y"], obj["id"])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/worldqa/engine.py", line 212, in _finite_result
+    if not math.isfinite(value):
+           ^^^^^^^^^^^^^^^^^^^^
+OverflowError: int too large to convert to float
+
+
+======================================================================
+FAIL: test_enormous_integer_difference_returns_cli_invalid_not_traceback (test_workshop_review.WorkshopIndependentReview.test_enormous_integer_difference_returns_cli_invalid_not_traceback) (sign=-1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 104, in test_enormous_integer_difference_returns_cli_invalid_not_traceback
+    self.assertEqual(run.returncode, 2, run.stderr)
+AssertionError: 1 != 2 : Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/worldqa/__main__.py", line 3, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/worldqa/cli.py", line 92, in main
+    report = inspect_scene(scene, config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/worldqa/engine.py", line 442, in inspect_scene
+    _grounding(objects, config),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/worldqa/engine.py", line 262, in _grounding
+    gap = _finite_result(obj["base_y"] - obj["support_y"], obj["id"])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/worldqa/engine.py", line 212, in _finite_result
+    if not math.isfinite(value):
+           ^^^^^^^^^^^^^^^^^^^^
+OverflowError: int too large to convert to float
+
+
+======================================================================
+FAIL: test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 71, in test_explicit_but_malformed_export_evidence_is_not_ignored
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 71, in test_explicit_but_malformed_export_evidence_is_not_ignored
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 71, in test_explicit_but_malformed_export_evidence_is_not_ignored
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 71, in test_explicit_but_malformed_export_evidence_is_not_ignored
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value='warning')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 71, in test_explicit_but_malformed_export_evidence_is_not_ignored
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value={})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 71, in test_explicit_but_malformed_export_evidence_is_not_ignored
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value=[None])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 71, in test_explicit_but_malformed_export_evidence_is_not_ignored
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value=[0])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 71, in test_explicit_but_malformed_export_evidence_is_not_ignored
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value=[' '])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 71, in test_explicit_but_malformed_export_evidence_is_not_ignored
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_explicit_but_malformed_export_evidence_is_not_ignored (test_workshop_review.WorkshopIndependentReview.test_explicit_but_malformed_export_evidence_is_not_ignored) (value=[[]])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 71, in test_explicit_but_malformed_export_evidence_is_not_ignored
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_export_diagnostic_survives_when_every_object_was_skipped (test_workshop_review.WorkshopIndependentReview.test_export_diagnostic_survives_when_every_object_was_skipped)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 144, in test_export_diagnostic_survives_when_every_object_was_skipped
+    self.assertEqual(report["summary"]["warning_count"], 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_export_diagnostics_are_inert_text_in_human_reports (test_workshop_review.WorkshopIndependentReview.test_export_diagnostics_are_inert_text_in_human_reports)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 122, in test_export_diagnostics_are_inert_text_in_human_reports
+    self.assertIn("&lt;img", html)
+AssertionError: '&lt;img' not found in '<!doctype html>\n<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">\n<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; style-src \'unsafe-inline\'; base-uri \'none\'; form-action \'none\'">\n<title>OpenAstra 世界质检 · review-station</title>\n<style>\n:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#f2f5f7;color:#14283b;font:15px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}\nmain{max-width:1320px;margin:0 auto;padding:38px 24px 60px}header{background:#15374c;color:#fff;padding:28px;border-radius:16px}h1{margin:4px 0 12px;font-size:30px}h2{margin:32px 0 12px;font-size:21px}.eyebrow{font-size:12px;letter-spacing:.2em;color:#9bd2cf}.sub{overflow-wrap:anywhere;color:#d4e6ef}.badge{display:inline-block;padding:5px 12px;border-radius:99px;font-weight:700;background:#e2ebef;color:#173447}.badge.fail{background:#ffceca;color:#762b24}.badge.pass{background:#c9f0df;color:#155342}.badge.blocked{background:#ffe4ad;color:#674400}\n.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}.card{background:white;padding:15px 20px;border:1px solid #dce4e9;border-radius:12px}.card strong{display:block;font-size:26px}.card span{font-size:13px}.notice{background:#fff5dd;border-left:4px solid #c6902c;padding:12px 18px;border-radius:6px}.notice ul{margin:6px 0;padding-left:22px}.scroll{overflow:auto;border:1px solid #dce4e9;border-radius:12px;background:#fff}table{width:100%;border-collapse:collapse;font-size:13px}th{text-align:left;background:#e7eff3;color:#294657;white-space:nowrap}th,td{padding:12px 14px;border-bottom:1px solid #e5ebef;vertical-align:top}td{overflow-wrap:anywhere;max-width:460px}tr:last-child td{border-bottom:0}.fine{font-size:13px;color:#596c78}a{color:#24607c}@media(max-width:700px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}main{padding:18px 12px}header{padding:20px}h1{font-size:24px}}@media print{body{background:white}main{padding:0}.scroll{overflow:visible}header{color:#14283b;background:white;border:1px solid #ccc}.sub{color:#294657}}\n</style></head><body><main>\n<header><div class="eyebrow">OPENASTRA / WORLD QA LAB</div><h1>世界质检报告</h1><span class="badge pass">PASS · 已检查通过</span>\n<p class="sub">场景：review-station<br>证据类型：engine_export</p></header>\n<div class="cards"><div class="card"><strong>1</strong><span>PASS · 已检查通过</span></div><div class="card"><strong>0</strong><span>FAIL · 发现问题</span></div><div class="card"><strong>0</strong><span>BLOCKED · 证据不足</span></div><div class="card"><strong>4</strong><span>N/A · 未适用</span></div></div><aside class="notice"><strong>证据边界</strong><ul><li>本报告仅评价声明的检查与输入证据，不构成上线批准。</li><li>synthetic 为合成样例；engine_export 为引擎导出声明，两者均不能代替真实岛屿的完整验收。</li><li>路线项只核对按序采样覆盖，不证明碰撞净空、连续通行或实际角色可玩性。</li><li>默认阈值是演示值，需由岛屿负责人校准。N/A 不计作通过；缺证据必须保留为 BLOCKED。</li><li>数值比较另用固定绝对容差 1e-9、相对容差 0；原始测量与业务阈值不改写。</li></ul></aside>\n<h2>检查覆盖</h2><div class="scroll"><table><thead><tr><th>检查</th><th>状态</th><th>检查量</th><th>问题数</th></tr></thead><tbody><tr><td>建筑落地 / Grounding</td><td>PASS · 已检查通过</td><td>1</td><td>0</td></tr><tr><td>轨道接缝 / Track joints</td><td>N/A · 未适用</td><td>0</td><td>0</td></tr><tr><td>灯柱间距 / Spacing</td><td>N/A · 未适用</td><td>0</td><td>0</td></tr><tr><td>列车朝向与比例 / Train consistency</td><td>N/A · 未适用</td><td>0</td><td>0</td></tr><tr><td>路线采样覆盖 / Route sample coverage</td><td>N/A · 未适用</td><td>0</td><td>0</td></tr></tbody></table></div>\n<h2>定位与测量</h2><div class="scroll"><table><thead><tr><th>检查 / 代码</th><th>严重度</th><th>对象</th><th>位置 (m)</th><th>测量值</th><th>阈值</th><th>说明</th></tr></thead><tbody><tr><td colspan="7">无问题记录；仍须查看未适用项及证据限制。</td></tr></tbody></table></div>\n<h2>有效阈值</h2><div class="scroll"><table><thead><tr><th>参数</th><th>值</th></tr></thead><tbody><tr><td>max_body_ratio_error</td><td>0.15</td></tr><tr><td>max_embed_m</td><td>0.15</td></tr><tr><td>max_float_m</td><td>0.15</td></tr><tr><td>max_forward_angle_deg</td><td>15.0</td></tr><tr><td>max_track_gap_m</td><td>0.03</td></tr><tr><td>min_column_spacing_m</td><td>2.0</td></tr><tr><td>min_lamp_spacing_m</td><td>4.0</td></tr><tr><td>route_tolerance_m</td><td>0.75</td></tr></tbody></table></div>\n<h2>可复现信息</h2><div class="scroll"><table><tbody></tbody></table></div>\n<p class="fine">本目录保存输入原始字节、有效配置及报告。未采集的截图、录像、GPU 数据不在这里推定存在。<br>\n<a href="report.json">JSON 报告</a> · <a href="report.md">Markdown 报告</a> · <a href="manifest.input.json">输入副本</a> · <a href="config.effective.json">有效配置</a></p>\n</main></body></html>\n'
+
+======================================================================
+FAIL: test_output_diagnostics_are_detached_from_caller_owned_input (test_workshop_review.WorkshopIndependentReview.test_output_diagnostics_are_detached_from_caller_owned_input)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 133, in test_output_diagnostics_are_detached_from_caller_owned_input
+    self.assertIn("export_warnings", report)
+AssertionError: 'export_warnings' not found in {'schema_version': 'worldqa.report.v1', 'scene_id': 'review-station', 'evidence_kind': 'engine_export', 'config': {'max_float_m': 0.15, 'max_embed_m': 0.15, 'max_track_gap_m': 0.03, 'min_lamp_spacing_m': 4.0, 'min_column_spacing_m': 2.0, 'max_forward_angle_deg': 15.0, 'max_body_ratio_error': 0.15, 'route_tolerance_m': 0.75}, 'numeric_comparison': {'absolute_tolerance': 1e-09, 'relative_tolerance': 0.0, 'units': "Each measurement's declared unit; no coordinate-scale allowance."}, 'checks': [{'id': 'grounding', 'status': 'pass', 'checked': 1, 'findings': []}, {'id': 'track_joints', 'status': 'not_applicable', 'checked': 0, 'findings': []}, {'id': 'spacing', 'status': 'not_applicable', 'checked': 0, 'findings': []}, {'id': 'train_consistency', 'status': 'not_applicable', 'checked': 0, 'findings': []}, {'id': 'route_trace', 'status': 'not_applicable', 'checked': 0, 'findings': [], 'scope': 'Ordered sampled waypoint coverage only; not collision, clearance, or gameplay verification.'}], 'summary': {'status': 'pass', 'check_counts': {'pass': 1, 'fail': 0, 'blocked': 0, 'not_applicable': 4}, 'checked': 1, 'error_count': 0, 'warning_count': 0}, 'limitations': ['Demo thresholds require calibration by the island owner; they are not approved production specifications.', 'Only declared objects, roles, connections and sampled evidence are inspected; unannotated content is outside coverage.', 'Synthetic data cannot establish the quality of the actual island.', 'Engine exports do not establish camera, GPU performance, physics correctness or gameplay acceptance.', 'A pass is limited to applicable declared checks and is never release approval.']}
+
+======================================================================
+FAIL: test_skipped_exported_object_cannot_disappear_behind_good_station (test_workshop_review.WorkshopIndependentReview.test_skipped_exported_object_cannot_disappear_behind_good_station)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/worldqa-independent-baseline-f7gk3t4z/tests/test_workshop_review.py", line 52, in test_skipped_exported_object_cannot_disappear_behind_good_station
+    self.assertEqual(report["summary"]["status"], "blocked")
+AssertionError: 'pass' != 'blocked'
+- pass
++ blocked
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.233s
+
+FAILED (failures=18)

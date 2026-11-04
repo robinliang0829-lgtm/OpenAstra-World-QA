@@ -1,0 +1,15 @@
+test_expected_direction_cannot_use_later_carriage (__main__.ExportContractTests.test_expected_direction_cannot_use_later_carriage) ... skipped 'Godot binary unavailable; target-engine validation remains pending'
+test_expected_direction_cannot_use_own_vehicle_markers (__main__.ExportContractTests.test_expected_direction_cannot_use_own_vehicle_markers) ... skipped 'Godot binary unavailable; target-engine validation remains pending'
+test_expected_tip_cannot_live_under_own_vehicle (__main__.ExportContractTests.test_expected_tip_cannot_live_under_own_vehicle) ... skipped 'Godot binary unavailable; target-engine validation remains pending'
+test_external_markers_cannot_alias_actual_forward (__main__.ExportContractTests.test_external_markers_cannot_alias_actual_forward) ... skipped 'Godot binary unavailable; target-engine validation remains pending'
+test_independent_route_markers_export_original_direction (__main__.ExportContractTests.test_independent_route_markers_export_original_direction) ... skipped 'Godot binary unavailable; target-engine validation remains pending'
+test_malformed_qainfo_does_not_silently_omit_object (__main__.ExportContractTests.test_malformed_qainfo_does_not_silently_omit_object) ... skipped 'Godot binary unavailable; target-engine validation remains pending'
+test_missing_role_is_refused (__main__.ExportContractTests.test_missing_role_is_refused) ... skipped 'Godot binary unavailable; target-engine validation remains pending'
+test_non_string_role_is_refused (__main__.ExportContractTests.test_non_string_role_is_refused) ... skipped 'Godot binary unavailable; target-engine validation remains pending'
+test_nonspatial_annotation_is_refused (__main__.ExportContractTests.test_nonspatial_annotation_is_refused) ... skipped 'Godot binary unavailable; target-engine validation remains pending'
+test_unknown_role_is_refused (__main__.ExportContractTests.test_unknown_role_is_refused) ... skipped 'Godot binary unavailable; target-engine validation remains pending'
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.000s
+
+OK (skipped=10)
