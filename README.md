@@ -6,6 +6,15 @@
 
 本次修复导出缺证告警在报告中丢失、极大整数计算溢出逃逸错误协议两项问题；Godot 增加坏标注拒绝和方向参考独立性校验。Python 修复已本地验证，Godot 代码仍待目标引擎运行。详细状态见 [验证记录](docs/STATUS.md)。
 
+## GitHub 维护源与首次导入
+
+- 本工程：[OpenAstra-World-QA](https://github.com/robinliang0829-lgtm/OpenAstra-World-QA)；沿用原 `OpenAstra-QA`，仓库 ID `1444320089`，更名后仍为公开仓库。
+- 所属工坊：[OpenAstra-World-Workshop](https://github.com/robinliang0829-lgtm/OpenAstra-World-Workshop)（私有独立仓库）。
+- 首次 API 快照导入提交：[`f49845efd127ae4bb4773b0852a69da7002dfe49`](https://github.com/robinliang0829-lgtm/OpenAstra-World-QA/commit/f49845efd127ae4bb4773b0852a69da7002dfe49)。对应本地源提交 `fbc775d13246054da97cffbe7a72f8aa510a38fc`；两者 tree 均为 `9f271f6edf442fc8a762a04c7b17e9bc2125e07f`。
+- 该首次导入提交的 [CI run 41789455581](https://github.com/robinliang0829-lgtm/OpenAstra-World-QA/actions/runs/41789455581) 已核实成功。后续文档提交的 CI 待独立核查；现有工作流不执行 Godot 引擎测试。
+
+API 导入保留一致的文件树，但提交和历史与本地源不同。原历史保留于 `OpenAstra-World-Workshop-Starter-v0.1.zip` 中的 Git bundle。后续开发从此 GitHub 仓库 clone 并沿远端历史继续，不强制推送原本地历史；后续文档更新不属于上面的首次导入树。
+
 独立于岛屿工程的只读检查工具。首期：建筑支撑高度、显式轨道连接、灯柱间距、列车方向/主体比例、路线采样覆盖。输入是明确标注的场景清单；输出是可以定位对象的 JSON、Markdown、HTML 证据包。
 
 ## 立即运行

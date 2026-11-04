@@ -11,6 +11,15 @@
 
 本轮证据见 `evidence/verified-v011-20261104/`。旧源码回放证明新反例能捕获问题，不将独立复审的回放说成它在实现前已编写。
 
+## GitHub 首次远端交付｜2026-11-04
+
+- 维护源：[OpenAstra-World-QA](https://github.com/robinliang0829-lgtm/OpenAstra-World-QA)。原 `OpenAstra-QA` 沿用并更名，仓库 ID `1444320089` 不变，仍为公开仓库。
+- 所属组织工程：[OpenAstra-World-Workshop](https://github.com/robinliang0829-lgtm/OpenAstra-World-Workshop)，私有独立仓库。
+- 本地源提交 `fbc775d13246054da97cffbe7a72f8aa510a38fc` → 首次 API 导入提交 [`f49845efd127ae4bb4773b0852a69da7002dfe49`](https://github.com/robinliang0829-lgtm/OpenAstra-World-QA/commit/f49845efd127ae4bb4773b0852a69da7002dfe49)；两者 tree 核对一致：`9f271f6edf442fc8a762a04c7b17e9bc2125e07f`。
+- 首次导入提交的 [CI run 41789455581](https://github.com/robinliang0829-lgtm/OpenAstra-World-QA/actions/runs/41789455581) 已成功；工作流运行 Python 3.10／3.12 测试及合成正常报告，不运行 Godot。此结果只对应上述首次导入 SHA，本次文档更新后的 CI 待单独核查。
+
+首次远端树与本地源树一致，不代表提交历史相同。本轮使用 API 快照导入，原历史的 Git bundle 保留在 `OpenAstra-World-Workshop-Starter-v0.1.zip`。后续开发从 GitHub clone，沿远端提交历史继续；后续文档变更不属于首次导入树。真实岛未验收、Godot 10 条跳过、未部署的结论不变。
+
 以下保留首次 v0.1 交付记录，数字和待办为当时状态；与本节不一致处以本节为准。
 
 ## 历史：v0.1 开工回执 / 2026-11-04
